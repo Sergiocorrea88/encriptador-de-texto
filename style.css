@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+html{
+    font-size: 16px;
+}
+
+:root{
+    --color-primario: #609ED4;
+    --color-secundario: #FFFFFF;
+    --color-terciario: #0A3871;
+    --color-cuaternario: #D8DFE8;
+
+    --fuente-inter:"Inter", "sans-serif"
+}
+body {
+    background-color: var(--color-cuaternario);
+}
+
+header {
+    width: 50%;
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    padding: 2% 70% 4% 2%;
+  
+    font-family: var(--fuente-inter);
+}
+
+main{
+    display: flex;
+    justify-content: space-evenly;
+    font-family: var(--fuente-inter);
+    font-size: 1.5rem;
+
+}
+
+span{
+    font-size: 0.8rem;
+    font-family: var(--fuente-inter);
+    font-weight: 600;
+}
+
+.principal{
+    flex-direction: column;
+    padding-right: 1%;
+
+}
+.cuadroTexto{
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+    padding: 0.3rem 0.3rem;
+    font-size: 1.3rem;
+    box-sizing: 100%, 60%;
+    font-family: var(--fuente-inter);
+    font-weight: 700;
+    resize: none;
+    border: 0.5rem groove var(--color-primario)
+    
+}
+  
+.admiracion{
+    padding-right: 0.2rem;
+}
+.botonesCaja{
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+  .botonesCaja__encriptar{
+    font-family: var(--fuente-inter);
+    font-weight: 400;
+    background-color: var(--color-terciario);
+    color: var(--color-secundario);
+    font-size: 2rem;
+    padding: 1rem 1rem;
+    width: 328px;
+    border: 0.25rem dotted var(--color-cuaternario);
+    border-radius: 24px;
+}
+
+.botonesCaja__desencriptar{
+    font-family: var(--fuente-inter);
+    font-weight: 400;
+    background-color: var(--color-cuaternario);
+    color: var(--color-terciario);
+    font-size: 2rem;
+    padding: 1rem 1rem;
+    width: 328px;
+    border: 0.25rem dotted var(--color-terciario);
+    border-radius: 24px;
+}
+
+.ladoDerecho{
+    
+    width: 30rem;
+    height: 45rem;
+    background: var(--color-secundario);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    font-family: var(--fuente-inter);
+    border: 1px solid var(--color-terciario);
+    border-radius: 34px;
+    padding: 1rem 1rem;
+}
+.botonesCaja__copiar{
+    font-family: var(--fuente-inter);
+    font-weight: 400;
+    background-color: var(--color-secundario);
+    color: var(--color-terciario);
+    font-size: 2rem;
+    padding: 1rem 1rem;
+    width: 328px;
+    border: 0.25rem dotted var(--color-terciario);
+    border-radius: 24px;
+    display: none;
+}
+.footer{
+    font-family: var(--fuente-inter);
+    font-weight: 300;
+    margin-top: 40%;
+    margin-bottom: 10%;
+    
+}
+
+@media (max-width:768px) {
+    main{
+        flex-direction: column;
+        width: 100%;
+        padding: 1rem 1rem;
+    }
+    .cuadroTexto{
+        width: 100%;
+        overflow: auto;
+        align-items: center;
+    }
+    .botonesCaja{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .imagenMuñeco{
+        display: none;
+  
+    }
+    .ladoDerecho{
+        margin-top: 1rem;
+        width: 90%;
+        height: auto;
+    }
+}
+
+@media (max-width:375px) {
+        main{
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 1rem;
+        }
+        .cuadroTexto{
+            width: 100%;
+            overflow: auto;
+            align-items: center;
+        }
+        .botonesCaja{
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+        }
+        .imagenMuñeco{
+            display: none;
+      
+        }
+    .ladoDerecho{
+        padding: 2rem 2 rem 2 rem 2rem;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        width: 90%;
+        height: auto;
+    }
+}
+
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: fit-content;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 30px;
+    padding: 0 5px 8px 0;
+    background: repeating-linear-gradient(90deg,currentColor 0 8%,#0000 0 10%) 200% 100%/200% 3px no-repeat;
+    animation: l3 2s steps(6) infinite;
+  }
+  .loader:before {
+    content:"Loading..."
+  }
+  @keyframes l3 {to{background-position: 80% 100%}}

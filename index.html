@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="assets/logo alura.png" alt="Logo de Alura">
+        <h1>Cripto</h1>
+    </header>
+<main>
+    <form class="principal">
+        <div>
+            <textarea class="cuadroTexto" name="" id="" placeholder="Ingresa el texto en este espacio"></textarea>
+        </div>       
+
+        <img class="admiracion" src="assets/admiracion.png"   alt="signo de admiración"><span>no se aceptan mayúsculas ni caracteres especiales</span>
+        <div class="botonesCaja">   
+            <button class="botonesCaja__encriptar" id="botonEncriptar" type="button">Encriptar</button>
+                <p id="textoEncriptado" style="display: none;">Texto encriptado</p>
+            <button class="botonesCaja__desencriptar" id="botonDesencriptar" type="button">Desencriptar</button>
+            
+        </div>
+    </form>
+    <aside class="ladoDerecho">
+        <img class="imagenMuñeco" src="assets/Muñeco.png" alt="Imagen de una persona buscando con una lupa">
+        <div class="loader" style="display: none;"></div>
+
+        <div>         
+            <h2 class="ladoDerecho__h2">Ningún mensaje fue encontrado</h2>
+            <p class="ladoDerecho__p">Ingresa el texto que desees encriptar o desencriptar.</p>
+            <button class="botonesCaja__copiar" id="botoncopiar" type="button">Copiar</button>
+        </div>
+        </aside>
+</main>
+
+<footer class="footer">
+    Desarrollado por Sergio Correa - 2024
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
